@@ -5,14 +5,27 @@ public class Main {
         System.out.println(Jamayra);
 
         Jamayra.acelerar();
-        Jamayra.frenar();
+        Jamayra.acelerar();
+        Jamayra.acelerar();
+        Jamayra.acelerar();
+        Jamayra.acelerar();
+        Jamayra.acelerar();
+        Jamayra.acelerar();
+        Jamayra.acelerar();
+        Jamayra.acelerar();
         System.out.println(Jamayra.getSpeed());
         if (Jamayra.cambiarPiñon(3)){
             System.out.println("Accion realizada");
-        } else System.out.println("No puedes cambiar a un piñon no adyacente");
+        } else System.out.println("No puedes cambiar a un piñon no adyacente o mayor al numero de piñones");
         if (Jamayra.cambiarPlato(2)){
             System.out.println("Accion realizada");
-        } else System.out.println("No puedes cambiar a un plato no adyacente");
+        } else System.out.println("No puedes cambiar a un plato no adyacente o mayor al numero de platos");
+        if (Jamayra.cambiarPlato(3)){
+            System.out.println("Accion realizada");
+        } else System.out.println("No puedes cambiar a un plato no adyacente o mayor al numero de platos");
+        if (Jamayra.cambiarPlato(4)){
+            System.out.println("Accion realizada");
+        } else System.out.println("No puedes cambiar a un plato no adyacente o mayor al numero de platos");
         System.out.println(Jamayra);
     }
 }

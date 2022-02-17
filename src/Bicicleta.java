@@ -31,7 +31,8 @@ public class Bicicleta {
     public int getPiñon() {
         return piñon;
     }
-    //Definimos el modelo ya que es algo definible;
+
+    //Definimos el modelo en el constructor ya que es algo variable;
     // Los valores speed, plato y piñon en minimo ya que empezaremos con la bicileta estacionada
     // no hace falta definir estos valores al hacer la bici;
     public Bicicleta(String model) {
@@ -43,6 +44,10 @@ public class Bicicleta {
 
     public void acelerar() {
         Speed = Speed + 5;
+        if (Speed > 40){
+            Speed = 40;
+            System.out.println("MAX SPEED LIMIT IS 40Km/h!!!!");
+        }
     }
 
     public void frenar() {
@@ -57,12 +62,18 @@ public class Bicicleta {
         if (changeplato != (plato - 1 | plato + 1)) {
             return false;
         }
+        if (changeplato > 3){
+            return false;
+        }
         plato = changeplato;
         return true;
     }
 
     public boolean cambiarPiñon(int changepiñon) {
         if (changepiñon != (piñon - 1 | piñon + 1)) {
+            return false;
+        }
+        if (changepiñon > 7){
             return false;
         }
         plato = changepiñon;
